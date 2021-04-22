@@ -16,5 +16,10 @@ public class HelloWorldController {
 			return "home";
 
 		}
+	
+		public static int calcProduct(int a, int b) {
+        	int result = a * b;
+        	return  result;
+    		}
 		
 	}
