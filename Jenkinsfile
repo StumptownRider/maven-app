@@ -13,7 +13,7 @@ pipeline {
                 sshagent(credentials:['docker-worker-key']) {
                     // some block
                     sh "ssh -o StrictHostKeyChecking=no -l ubuntu 172.31.93.15 'whoami'"
-                    sh "scp -r target/maven-app.war ubuntu@172.31.93.15"
+                    sh "scp -r target/maven-app.war ubuntu@172.31.93.15:/opt/tomcat/webapps/"
                 }
             }
         }
